@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RxjsLearnComponent } from './components/rxjs-learn/rxjs-learn.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'rxjs-learn',
+    component: RxjsLearnComponent,
   },
 ];
 
@@ -34,13 +39,14 @@ const appRoutes: Routes = [
     AddTaskComponent,
     AboutComponent,
     FooterComponent,
+    RxjsLearnComponent,
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes, { enableTracing: false }),
   ],
   providers: [],
   bootstrap: [AppComponent],
